@@ -90,6 +90,10 @@ create its object:
     the configured class name may be used by compiler passes and therefore
     should be set to a sensible value.
 
+By default, services created through a factory are not shared : each time they need to be injected, the container will call your factory to get an instance.
+If you don't need different instances, you may declare explicitly the service as shared to tell the container to create one instance frome the factory and
+reuse it thereafter.
+
 Using the Class as Factory Itself
 ---------------------------------
 
